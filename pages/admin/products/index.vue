@@ -11,7 +11,7 @@
                     <p class="card-text">Product Id: {{product.id}}</p>
                     <p class="card-text">Product Stock In : {{product.stock}}</p>
                     <p class="card-text">Product Price : {{product.price}}</p>
-                    <p class="card-text">Category Id : {{product.category.name}}</p>
+                    <p class="card-text">Category : {{product.category.name}}</p>
                     <nuxt-link class="btn btn-sm btn-outline-primary" :to="{name:'admin-products-single', params:{id:product.id}}">View</nuxt-link>
                     <nuxt-link class="btn btn-sm btn-outline-warning" :to="{name:'admin-products-edit', params:{id:product.id}}">Edit</nuxt-link>
                     <button class="btn btn-sm btn-outline-danger" @click="$store.dispatch('product/deleteSingleProduct',product.id)">Delete</button>

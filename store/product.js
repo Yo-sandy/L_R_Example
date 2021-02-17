@@ -2,6 +2,13 @@ export const state = ()=> ({
   products: []
 })
 
+export const getters = {
+  getProductById :(state) => (product_id) =>{
+    return state.products.filter(product => product.id === product_id)[0]
+  }
+}
+
+
 export const mutations = {
   SET_PRODUCTS(state, products){
     state.products = products
@@ -50,8 +57,3 @@ export const actions = {
 }
 
 
-export const getters = {
-  getProductById :(state) => (product_id) =>{
-    return state.products.filter(product => product.id === product_id)[0]
-  }
-}
