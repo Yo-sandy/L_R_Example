@@ -3,6 +3,13 @@ export const state = ()=> ({
 })
 
 
+export const getters = {
+  getCategoryByID :(state) => (category_id) =>{
+    return state.categories.filter(category => category.id === category_id)[0]
+  }
+}
+
+
 export const mutations = {
     SET_CATEGORIES(state, categories){
       state.categories = categories;
@@ -51,9 +58,3 @@ export const mutations = {
 
 }
 
-
-export const getters = {
-  getCategoryByID :(state) => (category_id) =>{
-    return state.categories.filter(category => category.id === category_id)[0]
-  }
-}

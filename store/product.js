@@ -1,3 +1,4 @@
+
 export const state = ()=> ({
   products: []
 })
@@ -19,8 +20,7 @@ export const actions = {
   async getProducts({commit}) {
     const data = await this.$axios.$get('product')
     commit("SET_PRODUCTS",data)
-  },
-  async deleteSingleProduct({dispatch},id) {
+  },async deleteSingleProduct({dispatch},id) {
     const url = `product/${id}`;
     try {
       await this.$axios.delete(url);
