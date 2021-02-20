@@ -6,7 +6,7 @@ export const state = ()=> ({
 export const getters = {
   getCategoryByID :(state) => (category_id) =>{
     return state.categories.filter(category => category.id === category_id)[0]
-  }
+  },
 }
 
 
@@ -55,6 +55,7 @@ export const mutations = {
         this.$toast.error('Not Save')
       }
     }
+
 
 }
 

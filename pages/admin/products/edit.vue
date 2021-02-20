@@ -28,7 +28,10 @@
        </select>
     </div>
     <div class="mt-2">
-      <button class="btn btn-outline-primary" @click="$store.dispatch('product/update', product.id)">Save</button>
+      <button
+        class="btn btn-outline-primary"
+        @click="$store.dispatch('product/update', product.id)"
+      >Save</button>
     </div>
   </div>
 </template>
